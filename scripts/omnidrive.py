@@ -41,7 +41,7 @@ from geometry_msgs.msg import Twist
 
 # api-endpoint
 URL = "http://127.0.0.1/data/omnidrive"
-PARAMS = {'sid': 'robotino_rest_node'}
+PARAMS = {'sid': 'ros_robotino_rest_pkg'}
 
 
 def callback(data):

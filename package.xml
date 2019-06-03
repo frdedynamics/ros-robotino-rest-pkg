@@ -1,18 +1,14 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>robotino_rest_node</name>
+  <name>ros_robotino_rest_pkg</name>
   <version>0.0.0</version>
-  <description>The robotino_rest_node package. Access Robotino using its REST-API provided by restapid found in robotino-daemons.
-  Depends on python-requests package.
+  <description>The ros_robotino_rest_pkg package. Access Robotino using its REST-API provided by restapid found in robotino-daemons.
+  Depends on python-requests package. Expanded on work from Dr. Christian Verbeek.
   </description>
 
-  <maintainer email="v@rec.de">Dr. Christian Verbeek</maintainer>
-
+  <maintainer email="jmog@hvl.no">MOJO</maintainer>
   <license>BSD</license>
-
   <url type="website">https://wiki.openrobotino.org</url>
-
-  <author email="v@rec.de">Dr. Christian Verbeek</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>rospy</build_depend>
@@ -22,6 +18,7 @@
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
   
   <build_depend>message_generation</build_depend>
   <exec_depend>message_runtime</exec_depend>
