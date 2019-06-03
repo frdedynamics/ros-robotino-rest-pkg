@@ -4,12 +4,12 @@
 import sys
 import requests
 import rospy
-from robotino_rest_node.msg import AnalogReadings
+from ros_robotino_rest_pkg.msg import AnalogReadings
 
 
 # api-endpoint
 URL = "http://127.0.0.1/data/distancesensorarray"
-PARAMS = {'sid': 'robotino_rest_node'}
+PARAMS = {'sid': 'ros_robotino_rest_pkg'}
 
 
 def talker():

@@ -2,14 +2,14 @@
     <arg name="robotino_ip" value="172.31.1.145" />
     
     <!-- Inputs -->
-    <node name="analoginput" pkg="robotino_rest_node" type="analoginput.py" output="screen" args="$(arg robotino_ip)" />
-    <node name="digitalinput" pkg="robotino_rest_node" type="digitalinput.py" output="screen" args="$(arg robotino_ip)" />
-    <node name="bumper" pkg="robotino_rest_node" type="bumper.py" output="screen" args="$(arg robotino_ip)" />
-    <node name="distancesensor" pkg="robotino_rest_node" type="distancesensor.py" output="screen" args="$(arg robotino_ip)" />
-    <node name="odometry" pkg="robotino_rest_node" type="odometry.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="analoginput" pkg="ros_robotino_rest_pkg" type="analoginput.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="digitalinput" pkg="ros_robotino_rest_pkg" type="digitalinput.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="bumper" pkg="ros_robotino_rest_pkg" type="bumper.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="distancesensor" pkg="ros_robotino_rest_pkg" type="distancesensor.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="odometry" pkg="ros_robotino_rest_pkg" type="odometry.py" output="screen" args="$(arg robotino_ip)" />
 
     <!-- Outputs -->
-    <node name="digitaloutput" pkg="robotino_rest_node" type="digitaloutput.py" output="screen" args="$(arg robotino_ip)" />
-    <node name="omnidrive" pkg="robotino_rest_node" type="omnidrive.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="digitaloutput" pkg="ros_robotino_rest_pkg" type="digitaloutput.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="omnidrive" pkg="ros_robotino_rest_pkg" type="omnidrive.py" output="screen" args="$(arg robotino_ip)" />
 
 </launch>
