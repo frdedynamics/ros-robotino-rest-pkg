@@ -14,7 +14,6 @@ PARAMS = {'sid': 'ros_robotino_rest_pkg'}
 
 def callback(data):
     """ function docstring, yo! """
-    rospy.loginfo(str(data))
     try:
         result = requests.post(url=URL, params=PARAMS, data=json.dumps(data.values))
         if result.status_code != 200:

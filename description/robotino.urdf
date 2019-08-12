@@ -3,7 +3,7 @@
 <!-- ***************************** Main Body ***************************** -->
   <link name="base_link">
     <visual>
-      <origin xyz="0 0 0.035" rpy="0 0 0"/>
+      <origin xyz="0 0 0.035" rpy="0 0 1.57"/>
       <geometry>
         <mesh filename="package://ros_robotino_rest_pkg/description/model/Robotino3_SplitMain.dae" scale="0.01 0.01 0.01"/>
       </geometry>

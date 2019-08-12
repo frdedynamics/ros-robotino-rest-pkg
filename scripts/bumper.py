@@ -52,7 +52,7 @@ def talker():
             result = requests.get(url=URL, params=PARAMS)
             if result.status_code == 200:
                 data = result.json()
-                rospy.loginfo(data)
+
                 bumper_pub.publish(data["value"])
             else:
                 rospy.logwarn("get from %s with params %s failed", URL, PARAMS)

@@ -52,7 +52,7 @@ def talker():
             result = requests.get(url=URL, params=PARAMS)
             if result.status_code == 200:
                 data = result.json()
-                rospy.loginfo(data)
+
                 msg = AnalogReadings()
                 msg.stamp = rospy.get_rostime()
                 msg.values = data

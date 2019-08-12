@@ -46,8 +46,6 @@ PARAMS = {'sid': 'ros_robotino_rest_pkg'}
 
 def callback(data):
     """ function docstring, yo! """
-    rospy.loginfo("%f %f %f", data.linear.x, data.linear.y, data.angular.z)
-    # pdata = {'vx': data.linear.x, 'vy': data.linear.y, 'omega': data.angular.z}
     tmpp = "[" + str(data.linear.x) + "," + str(data.linear.y) + "," + str(data.angular.z) + "]"
     try:
         result = requests.post(url=URL, params=PARAMS, data=tmpp)
