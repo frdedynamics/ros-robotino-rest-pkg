@@ -65,7 +65,8 @@ def talker():
 
         t.transform.translation = msg.pose.pose.position
 
-        q = tf_conversions.transformations.quaternion_from_euler(0, 0, msg.pose.pose.orientation.w)
+        q = tf_conversions.transformations.quaternion_from_euler(
+            0, 0, msg.pose.pose.orientation.w)
         t.transform.rotation.x = q[0]
         t.transform.rotation.y = q[1]
         t.transform.rotation.z = q[2]
