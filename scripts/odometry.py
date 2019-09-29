@@ -24,8 +24,8 @@ def talker():
     t = geometry_msgs.msg.TransformStamped()
 
     msg = Odometry()
-    msg.header.frame_id = 'odom'
-    msg.child_frame_id = 'base_link'
+    msg.header.frame_id = 'robotino/odom'
+    msg.child_frame_id = 'robotino/base_link'
 
     while not rospy.is_shutdown():
         try:

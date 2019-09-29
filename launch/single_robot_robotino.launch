@@ -1,5 +1,10 @@
 <launch>
+    <!-- Arguments -->
     <arg name="robotino_ip" value="172.31.1.145" />
+    <arg name="model" default="$(find ros_robotino_rest_pkg)/description/robotino.urdf" />
+
+    <!-- Parameters -->
+    <param name="robotino_description" command="$(find xacro)/xacro --inorder $(arg model)" />
     
     <!-- Inputs -->
     <node name="analoginput" pkg="ros_robotino_rest_pkg" type="analoginput.py" output="screen" args="$(arg robotino_ip)" />
@@ -7,6 +12,14 @@
     <node name="bumper" pkg="ros_robotino_rest_pkg" type="bumper.py" output="screen" args="$(arg robotino_ip)" />
     <node name="distancesensor" pkg="ros_robotino_rest_pkg" type="distancesensor.py" output="screen" args="$(arg robotino_ip)" />
     <node name="odometry" pkg="ros_robotino_rest_pkg" type="odometry.py" output="screen" args="$(arg robotino_ip)" />
+
+    <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster" args="0 0 0 0 0 0 robotino/odom robotino/base_link 50" />
+
+    <node pkg="robot_state_publisher" type="state_publisher" name="robotino_robot_state_publisher" >
+      <remap from="robot_description" to="robotino_description" />
+      <remap from="joint_states" to="robotino_joint_states" />
+      <param name="tf_prefix" value="robotino" />
+    </node>
 
     <!-- Outputs -->
     <node name="digitaloutput" pkg="ros_robotino_rest_pkg" type="digitaloutput.py" output="screen" args="$(arg robotino_ip)" />
