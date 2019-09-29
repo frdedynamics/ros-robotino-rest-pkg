@@ -29,7 +29,7 @@
     </collision>
   </link>
 <!-- ========== Wheel 0 - Joint ========== --> 
-  <joint name="wheel0_joint" type="continuous">
+  <joint name="wheel0_joint" type="fixed">
     <parent link="base_link"/>
     <child link="wheel0_link"/>
     <origin xyz="-0.0001 0.1825 0.059154" rpy="0 0 0"/>
@@ -50,7 +50,7 @@
     </collision>
   </link>
 <!-- ========== Wheel 1 - Joint ========== --> 
-  <joint name="wheel1_joint" type="continuous">
+  <joint name="wheel1_joint" type="fixed">
     <parent link="base_link"/>
     <child link="wheel1_link"/>
     <origin xyz="-0.157067 -0.090625 0.059154" rpy="0 0 2.094395102393195"/>
@@ -71,7 +71,7 @@
     </collision>
   </link>
 <!-- ========== Wheel 2 - Joint ========== --> 
-  <joint name="wheel2_joint" type="continuous">
+  <joint name="wheel2_joint" type="fixed">
     <parent link="base_link"/>
     <child link="wheel2_link"/>
     <origin xyz="0.156867 -0.090625 0.059154" rpy="0 0 -2.094395102393195"/>
