@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" module docstring, yo! """
+""" This script does not work at the moment. It is just for controlling the gripper. Current problem is power_response = {"current" : 20} returns response 400. """
 
 import sys
 import json
@@ -9,13 +9,13 @@ from ros_robotino_rest_pkg.msg import DigitalReadings
 from std_msgs.msg import Int16
 
 # api-endpoint
-URL = "http://127.0.0.1/data/poweroutput"
+URL = "http://127.0.0.1/data/poweroutputcurrent"
 PARAMS = {'sid': 'ros_robotino_rest_pkg'}
 
 
 def callback(msg):
     """ function docstring, yo! """
-    power_response = {"value": 20}
+    power_response = {"current" : 20}
     
     try:
         result = requests.post(url=URL, params=PARAMS, data=json.dumps(power_response))

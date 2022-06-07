@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" module docstring, yo!"""
+""" This script does not work at the moment. It is just for controlling the gripper."""
 
 import sys
 import requests
