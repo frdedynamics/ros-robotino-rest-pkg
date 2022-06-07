@@ -4,7 +4,7 @@
     <arg name="model" default="$(find ros_robotino_rest_pkg)/description/robotino.urdf" />
 
     <!-- Parameters -->
-    <param name="robotino_description" command="$(find xacro)/xacro --inorder $(arg model)" />
+    <param name="robotino_description" command="$(find xacro)/xacro $(arg model)" />
     
     <!-- Inputs -->
     <node name="analoginput" pkg="ros_robotino_rest_pkg" type="analoginput.py" output="screen" args="$(arg robotino_ip)" />
@@ -15,7 +15,7 @@
 
     <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster" args="0 0 0 0 0 0 robotino/odom robotino/base_link 50" />
 
-    <node pkg="robot_state_publisher" type="state_publisher" name="robotino_robot_state_publisher" >
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robotino_robot_state_publisher" >
       <remap from="robot_description" to="robotino_description" />
       <remap from="joint_states" to="robotino_joint_states" />
       <param name="tf_prefix" value="robotino" />
