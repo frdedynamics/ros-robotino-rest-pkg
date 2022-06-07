@@ -12,6 +12,7 @@
     <node name="bumper" pkg="ros_robotino_rest_pkg" type="bumper.py" output="screen" args="$(arg robotino_ip)" />
     <node name="distancesensor" pkg="ros_robotino_rest_pkg" type="distancesensor.py" output="screen" args="$(arg robotino_ip)" />
     <node name="odometry" pkg="ros_robotino_rest_pkg" type="odometry.py" output="screen" args="$(arg robotino_ip)" />
+    <node name="poweroutputcurrent" pkg="ros_robotino_rest_pkg" type="poweroutputcurrent.py" output="screen" args="$(arg robotino_ip)" />
 
     <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster" args="0 0 0 0 0 0 robotino/odom robotino/base_link 50" />
 

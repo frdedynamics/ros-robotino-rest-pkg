@@ -53,6 +53,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    AnalogReadings.msg
    DigitalReadings.msg
+   PowerReadings.msg
 #   Message2.msg
 )
 
